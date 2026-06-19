@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #F19696;
+  --secondary: #FAB6AD;
+  --accent: #929992;
+  --bg-base: #FAF8F5;
+  --text-base: #3A3F3A;
+  --text-muted: #6B706B;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --card-border: rgba(107, 112, 107, 0.15);
+  --shadow-color: rgba(107, 112, 107, 0.08);
+}
+
+.dark {
+  --primary: #F19696;
+  --secondary: #FAB6AD;
+  --accent: #FAB6AD;
+  --bg-base: #1C201C;
+  --text-base: #E5E7E6;
+  --text-muted: #929992;
+  --card-bg: rgba(35, 41, 37, 0.75);
+  --card-border: rgba(255, 255, 255, 0.07);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-bg-base: var(--bg-base);
+  --color-text-base: var(--text-base);
+  --color-text-muted: var(--text-muted);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-base);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Apple-style minimalist Glassmorphism */
+.glass {
+  background-color: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 32px 0 var(--shadow-color);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Custom premium buttons */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+.btn-primary:hover {
+  background-color: #e57f7f;
+  transform: translateY(-1px);
+}
