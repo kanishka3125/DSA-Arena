@@ -42,12 +42,6 @@ body {
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
 }
 
 /* Apple-style minimalist Glassmorphism */
@@ -59,10 +53,10 @@ body::-webkit-scrollbar {
   box-shadow: 0 8px 32px 0 var(--shadow-color);
 }
 
-.scrollbar-hide::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
 }
-.scrollbar-hide {
+* {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
