@@ -31,7 +31,7 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center space-x-6 text-sm font-medium">
-        <Link to="/" className="flex items-center space-x-1 text-text-muted hover:text-text-base transition-colors">
+        <Link to="/dashboard" className="flex items-center space-x-1 text-text-muted hover:text-text-base transition-colors">
           <LayoutDashboard size={18} />
           <span>Dashboard</span>
         </Link>
